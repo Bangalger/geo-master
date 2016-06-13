@@ -5,12 +5,15 @@
     // device APIs are available
     //
     function onDeviceReady() {
+        alert("device ready papa");
         navigator.geolocation.getCurrentPosition(onSuccess, onError);
+
     }
 
     // onSuccess Geolocation
     //
     function onSuccess(position) {
+        alert("onSuccess papa");
         var element = document.getElementById('geolocation');
         element.innerHTML = 'Latitud: '           + position.coords.latitude              + '<br />' +
                             'Longitud: '          + position.coords.longitude             + '<br />';
